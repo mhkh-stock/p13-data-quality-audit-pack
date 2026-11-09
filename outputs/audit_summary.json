@@ -1,0 +1,38 @@
+{
+  "rows_received": 1524,
+  "unique_order_ids": 1500,
+  "total_defects": 300,
+  "affected_orders": 300,
+  "clean_orders": 1200,
+  "by_type": {
+    "category_mismatch": 31,
+    "duplicate_order_id": 24,
+    "future_date": 10,
+    "invalid_email": 27,
+    "malformed_date": 5,
+    "missing_city": 41,
+    "missing_email": 63,
+    "negative_quantity": 12,
+    "nonstandard_payment": 38,
+    "orphan_product_code": 22,
+    "total_mismatch": 18,
+    "zero_unit_price": 9
+  },
+  "by_severity": {
+    "Critical": 85,
+    "High": 105,
+    "Medium": 110
+  },
+  "by_column": {
+    "category": 31,
+    "city": 41,
+    "customer_email": 90,
+    "order_date": 15,
+    "order_id": 24,
+    "payment_method": 38,
+    "product_code": 22,
+    "quantity": 12,
+    "total_amount": 18,
+    "unit_price": 9
+  }
+}

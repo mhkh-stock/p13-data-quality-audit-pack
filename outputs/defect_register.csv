@@ -1,0 +1,301 @@
+defect_id,order_id,column,defect_type,severity,detail,fix_applied
+DQ-0001,ANT-10004,customer_email,invalid_email,High,'danish.raza257example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0002,ANT-10005,payment_method,nonstandard_payment,Medium,payment 'cod' is not a canonical value,Standardised to the canonical payment name.
+DQ-0003,ANT-10008,category,category_mismatch,Medium,category 'Stationery' disagrees with the master ('Personal Care') for PC-601,Reset to the product master's category.
+DQ-0004,ANT-10010,order_date,malformed_date,High,"date '24/04/2026' is DD/MM/YYYY, not ISO YYYY-MM-DD",Re-parsed DD/MM/YYYY to ISO (YYYY-MM-DD).
+DQ-0005,ANT-10013,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0006,ANT-10038,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0007,ANT-10046,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0008,ANT-10055,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0009,ANT-10060,category,category_mismatch,Medium,category 'Personal Care' disagrees with the master ('Grocery') for GR-107,Reset to the product master's category.
+DQ-0010,ANT-10065,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0011,ANT-10070,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Personal Care') for PC-602,Reset to the product master's category.
+DQ-0012,ANT-10072,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0013,ANT-10076,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0014,ANT-10081,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0015,ANT-10089,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0016,ANT-10090,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0017,ANT-10103,quantity,negative_quantity,Critical,quantity is -12,Take the absolute value; recompute the total.
+DQ-0018,ANT-10108,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0019,ANT-10112,order_date,future_date,High,date 2026-09-15 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0020,ANT-10114,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0021,ANT-10119,category,category_mismatch,Medium,category 'Home & Kitchen' disagrees with the master ('Electronics') for EL-206,Reset to the product master's category.
+DQ-0022,ANT-10132,quantity,negative_quantity,Critical,quantity is -10,Take the absolute value; recompute the total.
+DQ-0023,ANT-10147,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0024,ANT-10150,customer_email,invalid_email,High,'mehwish.hussain141example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0025,ANT-10151,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0026,ANT-10154,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0027,ANT-10155,quantity,negative_quantity,Critical,quantity is -12,Take the absolute value; recompute the total.
+DQ-0028,ANT-10165,payment_method,nonstandard_payment,Medium,payment 'cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0029,ANT-10171,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0030,ANT-10174,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0031,ANT-10175,order_date,future_date,High,date 2026-09-23 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0032,ANT-10183,customer_email,invalid_email,High,'mehwish.awan216' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0033,ANT-10190,customer_email,invalid_email,High,'farah.akhtar77@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0034,ANT-10192,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0035,ANT-10193,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0036,ANT-10198,customer_email,invalid_email,High,'farah.ahmed230@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0037,ANT-10210,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0038,ANT-10211,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0039,ANT-10219,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0040,ANT-10220,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0041,ANT-10223,total_amount,total_mismatch,Critical,total 6100 != quantity 8 x price 450 = 3600,Recompute total = quantity x unit price.
+DQ-0042,ANT-10230,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0043,ANT-10232,payment_method,nonstandard_payment,Medium,payment 'COD' is not a canonical value,Standardised to the canonical payment name.
+DQ-0044,ANT-10234,total_amount,total_mismatch,Critical,total 3820 != quantity 11 x price 120 = 1320,Recompute total = quantity x unit price.
+DQ-0045,ANT-10235,category,category_mismatch,Medium,category 'Grocery' disagrees with the master ('Home & Kitchen') for HK-304,Reset to the product master's category.
+DQ-0046,ANT-10238,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0047,ANT-10242,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0048,ANT-10249,category,category_mismatch,Medium,category 'Stationery' disagrees with the master ('Personal Care') for PC-604,Reset to the product master's category.
+DQ-0049,ANT-10250,payment_method,nonstandard_payment,Medium,payment 'COD' is not a canonical value,Standardised to the canonical payment name.
+DQ-0050,ANT-10262,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Grocery') for GR-104,Reset to the product master's category.
+DQ-0051,ANT-10273,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0052,ANT-10279,category,category_mismatch,Medium,category 'Electronics' disagrees with the master ('Grocery') for GR-107,Reset to the product master's category.
+DQ-0053,ANT-10286,payment_method,nonstandard_payment,Medium,payment 'jazzcash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0054,ANT-10288,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0055,ANT-10296,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0056,ANT-10302,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0057,ANT-10306,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0058,ANT-10307,quantity,negative_quantity,Critical,quantity is -5,Take the absolute value; recompute the total.
+DQ-0059,ANT-10308,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0060,ANT-10309,customer_email,invalid_email,High,'amna.raza142@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0061,ANT-10316,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0062,ANT-10328,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0063,ANT-10329,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Electronics') for EL-201,Reset to the product master's category.
+DQ-0064,ANT-10331,total_amount,total_mismatch,Critical,total 2900 != quantity 1 x price 2400 = 2400,Recompute total = quantity x unit price.
+DQ-0065,ANT-10334,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0066,ANT-10337,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Stationery') for ST-504,Reset to the product master's category.
+DQ-0067,ANT-10343,payment_method,nonstandard_payment,Medium,payment 'cod' is not a canonical value,Standardised to the canonical payment name.
+DQ-0068,ANT-10345,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0069,ANT-10351,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0070,ANT-10354,quantity,negative_quantity,Critical,quantity is -6,Take the absolute value; recompute the total.
+DQ-0071,ANT-10355,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0072,ANT-10360,payment_method,nonstandard_payment,Medium,payment 'cod' is not a canonical value,Standardised to the canonical payment name.
+DQ-0073,ANT-10368,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0074,ANT-10372,customer_email,invalid_email,High,'bilal.qureshi151@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0075,ANT-10375,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0076,ANT-10382,payment_method,nonstandard_payment,Medium,payment 'bank' is not a canonical value,Standardised to the canonical payment name.
+DQ-0077,ANT-10397,payment_method,nonstandard_payment,Medium,payment 'Cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0078,ANT-10400,payment_method,nonstandard_payment,Medium,payment 'cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0079,ANT-10404,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0080,ANT-10405,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0081,ANT-10411,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0082,ANT-10413,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0083,ANT-10415,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0084,ANT-10432,total_amount,total_mismatch,Critical,total 45150 != quantity 10 x price 4500 = 45000,Recompute total = quantity x unit price.
+DQ-0085,ANT-10433,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0086,ANT-10434,payment_method,nonstandard_payment,Medium,payment 'Cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0087,ANT-10436,customer_email,invalid_email,High,'mahnoor.sheikh85@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0088,ANT-10441,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0089,ANT-10442,category,category_mismatch,Medium,category 'Electronics' disagrees with the master ('Home & Kitchen') for HK-305,Reset to the product master's category.
+DQ-0090,ANT-10447,total_amount,total_mismatch,Critical,total 7180 != quantity 9 x price 520 = 4680,Recompute total = quantity x unit price.
+DQ-0091,ANT-10455,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0092,ANT-10458,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0093,ANT-10460,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0094,ANT-10463,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0095,ANT-10467,payment_method,nonstandard_payment,Medium,payment 'jazzcash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0096,ANT-10468,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0097,ANT-10472,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0098,ANT-10473,category,category_mismatch,Medium,category 'Electronics' disagrees with the master ('Home & Kitchen') for HK-303,Reset to the product master's category.
+DQ-0099,ANT-10479,customer_email,invalid_email,High,'saad.iqbal298example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0100,ANT-10482,total_amount,total_mismatch,Critical,total 6850 != quantity 9 x price 650 = 5850,Recompute total = quantity x unit price.
+DQ-0101,ANT-10493,category,category_mismatch,Medium,category 'Stationery' disagrees with the master ('Electronics') for EL-207,Reset to the product master's category.
+DQ-0102,ANT-10494,quantity,negative_quantity,Critical,quantity is -10,Take the absolute value; recompute the total.
+DQ-0103,ANT-10510,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0104,ANT-10517,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0105,ANT-10520,customer_email,invalid_email,High,'ali.siddiqui182@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0106,ANT-10526,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0107,ANT-10527,customer_email,invalid_email,High,'maryam.akhtar165@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0108,ANT-10529,customer_email,invalid_email,High,'ayesha.raza242example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0109,ANT-10530,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0110,ANT-10535,payment_method,nonstandard_payment,Medium,payment 'bank' is not a canonical value,Standardised to the canonical payment name.
+DQ-0111,ANT-10540,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0112,ANT-10541,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0113,ANT-10545,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0114,ANT-10555,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0115,ANT-10559,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0116,ANT-10560,customer_email,invalid_email,High,'kashif.ali159' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0117,ANT-10564,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0118,ANT-10566,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0119,ANT-10575,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0120,ANT-10591,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0121,ANT-10597,category,category_mismatch,Medium,category 'Personal Care' disagrees with the master ('Home & Kitchen') for HK-304,Reset to the product master's category.
+DQ-0122,ANT-10606,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0123,ANT-10617,customer_email,invalid_email,High,'mahnoor.sheikh195' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0124,ANT-10619,customer_email,invalid_email,High,'kiran.sheikh279example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0125,ANT-10627,order_date,future_date,High,date 2026-09-16 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0126,ANT-10631,total_amount,total_mismatch,Critical,total 2740 != quantity 2 x price 120 = 240,Recompute total = quantity x unit price.
+DQ-0127,ANT-10642,order_date,future_date,High,date 2026-09-26 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0128,ANT-10652,category,category_mismatch,Medium,category 'Electronics' disagrees with the master ('Stationery') for ST-502,Reset to the product master's category.
+DQ-0129,ANT-10654,order_date,future_date,High,date 2026-09-18 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0130,ANT-10657,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0131,ANT-10659,total_amount,total_mismatch,Critical,total 1410 != quantity 3 x price 420 = 1260,Recompute total = quantity x unit price.
+DQ-0132,ANT-10684,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0133,ANT-10687,category,category_mismatch,Medium,category 'Personal Care' disagrees with the master ('Home & Kitchen') for HK-306,Reset to the product master's category.
+DQ-0134,ANT-10689,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0135,ANT-10690,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0136,ANT-10695,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0137,ANT-10701,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0138,ANT-10703,total_amount,total_mismatch,Critical,total 13300 != quantity 3 x price 3600 = 10800,Recompute total = quantity x unit price.
+DQ-0139,ANT-10706,payment_method,nonstandard_payment,Medium,payment 'cod' is not a canonical value,Standardised to the canonical payment name.
+DQ-0140,ANT-10710,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0141,ANT-10711,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0142,ANT-10718,payment_method,nonstandard_payment,Medium,payment 'jazzcash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0143,ANT-10721,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0144,ANT-10733,category,category_mismatch,Medium,category 'Stationery' disagrees with the master ('Personal Care') for PC-602,Reset to the product master's category.
+DQ-0145,ANT-10739,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0146,ANT-10751,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0147,ANT-10760,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0148,ANT-10765,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Personal Care') for PC-601,Reset to the product master's category.
+DQ-0149,ANT-10767,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0150,ANT-10768,category,category_mismatch,Medium,category 'Electronics' disagrees with the master ('Home & Kitchen') for HK-301,Reset to the product master's category.
+DQ-0151,ANT-10772,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0152,ANT-10775,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0153,ANT-10777,total_amount,total_mismatch,Critical,total 4250 != quantity 5 x price 750 = 3750,Recompute total = quantity x unit price.
+DQ-0154,ANT-10786,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0155,ANT-10790,category,category_mismatch,Medium,category 'Personal Care' disagrees with the master ('Clothing') for CL-403,Reset to the product master's category.
+DQ-0156,ANT-10792,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0157,ANT-10795,order_date,malformed_date,High,"date '19/04/2026' is DD/MM/YYYY, not ISO YYYY-MM-DD",Re-parsed DD/MM/YYYY to ISO (YYYY-MM-DD).
+DQ-0158,ANT-10800,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0159,ANT-10802,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0160,ANT-10806,category,category_mismatch,Medium,category 'Stationery' disagrees with the master ('Home & Kitchen') for HK-303,Reset to the product master's category.
+DQ-0161,ANT-10814,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0162,ANT-10815,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0163,ANT-10819,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0164,ANT-10820,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0165,ANT-10824,quantity,negative_quantity,Critical,quantity is -3,Take the absolute value; recompute the total.
+DQ-0166,ANT-10826,total_amount,total_mismatch,Critical,total 3700 != quantity 8 x price 150 = 1200,Recompute total = quantity x unit price.
+DQ-0167,ANT-10832,quantity,negative_quantity,Critical,quantity is -11,Take the absolute value; recompute the total.
+DQ-0168,ANT-10835,customer_email,invalid_email,High,'bilal.qureshi151example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0169,ANT-10847,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0170,ANT-10852,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0171,ANT-10855,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0172,ANT-10859,category,category_mismatch,Medium,category 'Home & Kitchen' disagrees with the master ('Stationery') for ST-505,Reset to the product master's category.
+DQ-0173,ANT-10868,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0174,ANT-10872,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0175,ANT-10876,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0176,ANT-10880,order_date,future_date,High,date 2026-09-20 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0177,ANT-10893,order_date,future_date,High,date 2026-10-01 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0178,ANT-10899,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0179,ANT-10905,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0180,ANT-10910,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0181,ANT-10911,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0182,ANT-10921,category,category_mismatch,Medium,category 'Stationery' disagrees with the master ('Personal Care') for PC-605,Reset to the product master's category.
+DQ-0183,ANT-10922,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0184,ANT-10925,total_amount,total_mismatch,Critical,total 4600 != quantity 8 x price 450 = 3600,Recompute total = quantity x unit price.
+DQ-0185,ANT-10932,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0186,ANT-10933,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0187,ANT-10943,order_date,malformed_date,High,"date '13/01/2026' is DD/MM/YYYY, not ISO YYYY-MM-DD",Re-parsed DD/MM/YYYY to ISO (YYYY-MM-DD).
+DQ-0188,ANT-10949,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0189,ANT-10952,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0190,ANT-10959,customer_email,invalid_email,High,'waqas.awan203@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0191,ANT-10961,customer_email,invalid_email,High,'shahid.raza209example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0192,ANT-10965,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0193,ANT-10968,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0194,ANT-10969,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0195,ANT-10973,customer_email,invalid_email,High,'hira.raza237@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0196,ANT-10980,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0197,ANT-10987,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0198,ANT-10992,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0199,ANT-11014,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0200,ANT-11016,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0201,ANT-11022,customer_email,invalid_email,High,'fatima.ahmed60example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0202,ANT-11025,order_date,future_date,High,date 2026-09-15 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0203,ANT-11028,payment_method,nonstandard_payment,Medium,payment 'COD' is not a canonical value,Standardised to the canonical payment name.
+DQ-0204,ANT-11041,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0205,ANT-11042,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0206,ANT-11044,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0207,ANT-11047,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0208,ANT-11049,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0209,ANT-11056,payment_method,nonstandard_payment,Medium,payment 'Cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0210,ANT-11075,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0211,ANT-11078,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0212,ANT-11087,category,category_mismatch,Medium,category 'Personal Care' disagrees with the master ('Grocery') for GR-101,Reset to the product master's category.
+DQ-0213,ANT-11090,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0214,ANT-11092,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0215,ANT-11095,unit_price,zero_unit_price,Critical,unit price is 0,LEFT AT 0 — price must come from the client.
+DQ-0216,ANT-11099,payment_method,nonstandard_payment,Medium,payment 'bank' is not a canonical value,Standardised to the canonical payment name.
+DQ-0217,ANT-11103,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0218,ANT-11105,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0219,ANT-11109,payment_method,nonstandard_payment,Medium,payment 'COD' is not a canonical value,Standardised to the canonical payment name.
+DQ-0220,ANT-11110,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0221,ANT-11116,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0222,ANT-11122,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0223,ANT-11129,quantity,negative_quantity,Critical,quantity is -5,Take the absolute value; recompute the total.
+DQ-0224,ANT-11144,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0225,ANT-11160,quantity,negative_quantity,Critical,quantity is -1,Take the absolute value; recompute the total.
+DQ-0226,ANT-11161,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0227,ANT-11162,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0228,ANT-11167,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0229,ANT-11172,payment_method,nonstandard_payment,Medium,payment 'cod' is not a canonical value,Standardised to the canonical payment name.
+DQ-0230,ANT-11173,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0231,ANT-11176,payment_method,nonstandard_payment,Medium,payment 'Cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0232,ANT-11181,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0233,ANT-11182,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0234,ANT-11183,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0235,ANT-11186,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0236,ANT-11191,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0237,ANT-11193,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0238,ANT-11199,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0239,ANT-11205,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0240,ANT-11206,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0241,ANT-11214,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Home & Kitchen') for HK-305,Reset to the product master's category.
+DQ-0242,ANT-11222,category,category_mismatch,Medium,category 'Stationery' disagrees with the master ('Personal Care') for PC-606,Reset to the product master's category.
+DQ-0243,ANT-11225,total_amount,total_mismatch,Critical,total 40000 != quantity 3 x price 12500 = 37500,Recompute total = quantity x unit price.
+DQ-0244,ANT-11226,total_amount,total_mismatch,Critical,total 3220 != quantity 1 x price 720 = 720,Recompute total = quantity x unit price.
+DQ-0245,ANT-11227,total_amount,total_mismatch,Critical,total 27750 != quantity 8 x price 3450 = 27600,Recompute total = quantity x unit price.
+DQ-0246,ANT-11238,customer_email,invalid_email,High,'waqas.sheikh172' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0247,ANT-11245,payment_method,nonstandard_payment,Medium,payment 'cod' is not a canonical value,Standardised to the canonical payment name.
+DQ-0248,ANT-11248,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0249,ANT-11250,payment_method,nonstandard_payment,Medium,payment 'cod' is not a canonical value,Standardised to the canonical payment name.
+DQ-0250,ANT-11254,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0251,ANT-11258,payment_method,nonstandard_payment,Medium,payment 'jazzcash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0252,ANT-11269,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0253,ANT-11270,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0254,ANT-11271,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0255,ANT-11272,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0256,ANT-11280,order_date,malformed_date,High,"date '24/01/2026' is DD/MM/YYYY, not ISO YYYY-MM-DD",Re-parsed DD/MM/YYYY to ISO (YYYY-MM-DD).
+DQ-0257,ANT-11296,customer_email,invalid_email,High,'shahid.mirza291@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0258,ANT-11315,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0259,ANT-11317,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0260,ANT-11318,total_amount,total_mismatch,Critical,total 17900 != quantity 6 x price 2900 = 17400,Recompute total = quantity x unit price.
+DQ-0261,ANT-11321,total_amount,total_mismatch,Critical,total 5540 != quantity 7 x price 720 = 5040,Recompute total = quantity x unit price.
+DQ-0262,ANT-11322,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0263,ANT-11325,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Personal Care') for PC-604,Reset to the product master's category.
+DQ-0264,ANT-11331,payment_method,nonstandard_payment,Medium,payment 'CASH' is not a canonical value,Standardised to the canonical payment name.
+DQ-0265,ANT-11335,payment_method,nonstandard_payment,Medium,payment 'Cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0266,ANT-11337,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0267,ANT-11349,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0268,ANT-11351,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0269,ANT-11352,customer_email,invalid_email,High,'usman.raza128@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0270,ANT-11356,category,category_mismatch,Medium,category 'Home & Kitchen' disagrees with the master ('Grocery') for GR-103,Reset to the product master's category.
+DQ-0271,ANT-11361,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0272,ANT-11366,total_amount,total_mismatch,Critical,total 1650 != quantity 10 x price 150 = 1500,Recompute total = quantity x unit price.
+DQ-0273,ANT-11370,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0274,ANT-11377,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0275,ANT-11379,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0276,ANT-11380,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0277,ANT-11381,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0278,ANT-11385,order_date,future_date,High,date 2026-09-29 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0279,ANT-11393,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0280,ANT-11396,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Grocery') for GR-101,Reset to the product master's category.
+DQ-0281,ANT-11400,quantity,negative_quantity,Critical,quantity is -11,Take the absolute value; recompute the total.
+DQ-0282,ANT-11401,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0283,ANT-11402,order_date,malformed_date,High,"date '13/05/2026' is DD/MM/YYYY, not ISO YYYY-MM-DD",Re-parsed DD/MM/YYYY to ISO (YYYY-MM-DD).
+DQ-0284,ANT-11406,order_id,duplicate_order_id,Critical,order_id appears 2 times in the file,Drop the later copy; keep the first occurrence.
+DQ-0285,ANT-11413,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0286,ANT-11418,order_date,future_date,High,date 2026-10-03 is after the file's last date 2026-06-30,LEFT AS-IS — flag for the client to verify.
+DQ-0287,ANT-11419,payment_method,nonstandard_payment,Medium,payment 'Cash' is not a canonical value,Standardised to the canonical payment name.
+DQ-0288,ANT-11420,customer_email,invalid_email,High,'imran.ali276example.com' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0289,ANT-11425,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0290,ANT-11440,customer_email,invalid_email,High,'omar.shah319@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0291,ANT-11442,category,category_mismatch,Medium,category 'Clothing' disagrees with the master ('Personal Care') for PC-604,Reset to the product master's category.
+DQ-0292,ANT-11444,city,missing_city,Medium,city is blank,Set to 'Unknown' in the fixed file.
+DQ-0293,ANT-11457,customer_email,invalid_email,High,'amna.sheikh28' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0294,ANT-11460,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0295,ANT-11471,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0296,ANT-11473,product_code,orphan_product_code,Critical,code 'XX-9999' is not in the product master,LEFT AS-IS — code is not in the product master.
+DQ-0297,ANT-11474,customer_email,missing_email,High,email is blank,LEFT BLANK — ask the customer; never invent an email.
+DQ-0298,ANT-11491,category,category_mismatch,Medium,category 'Personal Care' disagrees with the master ('Grocery') for GR-101,Reset to the product master's category.
+DQ-0299,ANT-11493,customer_email,invalid_email,High,'zainab.hussain275@example' is not a valid email address,LEFT AS-IS — flag for the client to correct.
+DQ-0300,ANT-11496,quantity,negative_quantity,Critical,quantity is -12,Take the absolute value; recompute the total.
